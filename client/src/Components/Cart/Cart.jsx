@@ -145,9 +145,15 @@ const Cart = () => {
               </button>
             </div>
           ) : (
-            <p className=" w-full flex justify-center  items-center text-2xl font-bold text-green-600">
-              Your Cart is Empty
-            </p>
+            <div className="flex flex-col">
+              <img
+                className="h-90"
+                src="https://kingkisanghar.com/assets/images/inner-page/emptycart.png"
+              />
+              <p className=" w-full flex justify-center  items-center text-3xl font-bold text-green-600">
+                Your Cart is Empty
+              </p>
+            </div>
           )}
         </div>
 
@@ -245,29 +251,35 @@ const Cart = () => {
                     <span>₹{TotalINR}</span>
                   </div>
 
-                 <div className="flex flex-col space-y-3.5 w-full justify-center items-center mt-3">
-                 <button
-                    onClick={() => {
-                      navigate("/payment");
-                    }}
-                    className="flex w-[70%]  justify-center items-center p-3 rounded font-semibold text-white bg-green-400"
-                  >
-                    Proceed to Checkout
-                  </button>
-                  <button
-                    onClick={() => {
-                      navigate("/");
-                    }}
-                    className="flex w-[70%] space-x-  justify-around items-center p-3 rounded font-semibold text-black bg-gray-200"
-                  >
-                  <FaArrowLeft />  Return to shopping
-                  </button>
-                 </div>
+                  <div className="flex flex-col space-y-3.5 w-full justify-center items-center mt-3">
+                    <button
+                      onClick={() => {
+                        navigate("/payment");
+                      }}
+                      className="flex w-[70%]  justify-center items-center p-3 rounded font-semibold text-white bg-green-400"
+                    >
+                      Proceed to Checkout
+                    </button>
+                    <button
+                      onClick={() => {
+                        navigate("/");
+                      }}
+                      className="flex w-[70%] space-x-  justify-around items-center p-3 rounded font-semibold text-black bg-gray-200"
+                    >
+                      <FaArrowLeft /> Return to shopping
+                    </button>
+                  </div>
                 </div>
               ) : (
-                <p className="font-bold text-green-800 text-2xl flex justify-center items-center mt-10">
-                  Your cart is Empty
-                </p>
+                <div className="flex flex-col h-80 justify-center items-center">
+                  <img
+                    className="h-50"
+                    src="https://kingkisanghar.com/assets/images/inner-page/emptycart.png"
+                  />
+                  <p className=" w-full flex justify-center  items-center text-3xl font-bold text-green-600">
+                    Your Cart is Empty
+                  </p>
+                </div>
               )}
             </div>
           </div>
